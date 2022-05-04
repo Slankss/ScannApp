@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".View.SepeteEkleActivity">
+
+
+    <TextView
+        android:id="@+id/lblQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="false"
+        android:layout_marginBottom="15dp"
+        android:text="Miktar :"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnSepeteEkle"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout" />
+
+    <ImageView
+        android:id="@+id/btnScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/scanning128px" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/lblQuality"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnScan"
+        app:layout_constraintVertical_bias="0.497">
+
+        <TextView
+            android:id="@+id/lblId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="false"
+            android:layout_marginBottom="40dp"
+            android:text="Ürün id :"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblId"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="false"
+            android:layout_marginBottom="40dp"
+            android:text="Ürün adı :"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/lblPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblName"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="false"
+            android:layout_marginBottom="20dp"
+            android:text="Ürün Fiyatı :"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+             />
+
+
+        <TextView
+            android:id="@+id/txtSName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSId"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentEnd="true"
+            android:maxWidth="175dp"
+
+            android:layout_marginBottom="40dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+           />
+
+        <TextView
+            android:id="@+id/txtSPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSName"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentEnd="true"
+
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+
+
+            />
+
+        <TextView
+            android:id="@+id/txtSId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="40dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtIstenilenAdet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginEnd="10dp"
+        android:text="1"
+
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_DecreaseQuality"
+        app:layout_constraintEnd_toStartOf="@+id/btn_IncreaseQuality"
+        app:layout_constraintTop_toTopOf="@+id/btn_DecreaseQuality" />
+
+    <ImageView
+        android:id="@+id/btn_DecreaseQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblQuality"
+        app:layout_constraintEnd_toStartOf="@+id/txtIstenilenAdet"
+        app:srcCompat="@drawable/minus_32px" />
+
+    <ImageView
+        android:id="@+id/btn_IncreaseQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/txtIstenilenAdet"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintTop_toTopOf="@+id/txtIstenilenAdet"
+        app:srcCompat="@drawable/add_32px" />
+
+    <Button
+        android:id="@+id/btnSepeteEkle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Ekle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
